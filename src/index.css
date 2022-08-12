@@ -1,0 +1,17 @@
+:root {
+
+  --primary-color: #DA3743;
+  --white: #ffffff;
+  --menu-bg: #FAFAFA;
+  --light-pink: rgba(218, 55, 67, 0.15);
+  --headers-black: #1A1A1A;
+  --black-primary: #030303;
+  --black-fill: #363A40;
+  --hero-paragraph: rgba(19, 37, 74, 1);
+  --black-tint: #4D4D4D;
+  --black-tint400: #999999;
+  --black-tint500: #666666;
+  --black-tint800: #333333;
+  --dark-blue: #67758D;
+
+}
