@@ -29,6 +29,7 @@
 body{
   font-family: 'Lato', sans-serif;
   /* padding: 0 9.75rem; */
+  overflow-x: hidden;
 }
 
 a{
@@ -178,7 +179,11 @@ button:hover{
 }
 @media screen and (max-width: 992px) {
   .navigation__wrapper{
-    padding: 1rem 1rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .page__links{
@@ -217,7 +222,7 @@ button:hover{
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
-  gap: 5rem;
+  gap: 10rem;
   padding-bottom: 11.55rem;
 }
 
@@ -253,13 +258,13 @@ button:hover{
 }
 .hero__right{
  position: relative;
- width: 100%; 
+ flex-grow: 1;
 }
 
 .ellipse{
   position: absolute;
   top: -2.5rem;
-  right: 2rem;
+  right: 3rem;
 }
 
 .message{
@@ -325,28 +330,52 @@ input:focus{
     padding-top: 3rem;
   }
 }
-@media screen and (max-width: 992px) {
+
+@media screen and ( max-width: 900px){
+    .hero__wrapper{
+      max-width: 100%;
+    }
+    .hero__container{
+      justify-content: center;
+      gap: 1rem;
+    }
+    .hero__title{
+      font-size: 3rem;
+    }
+    .hero__right img{
+      width: 320px;
+      margin-top: -5rem;
+    }
+    
+    .ellipse{
+      right: 1.5rem;
+      top: -2rem; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
   .hero__wrapper{
   padding: 0;
   background-image: url("./assets/svgs/mobile-bg.svg");
-  background-size: contain;
+  background-size: 60% 20%;
   background-repeat: no-repeat;
   background-position: left top;
     max-width: 100%;
     width: 100%;
-  background-size: 30rem 22rem;
+ 
     background-color: var(--primary-color);
   }
   .hero__container{
+    margin-top: 0;
     padding: 1rem;
     flex-direction: column;
     gap: 2rem;
-    padding-top: 52px;
     background-image: url("./assets/svgs/mobile-bg2.svg");
-    background-size: contain;
+    background-size: 100% 60%;
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 30rem 22rem;
+   
     height: 100vh;
   }
   .hero__paragraph{
@@ -364,11 +393,13 @@ input:focus{
     display: none;
   }
   .hero__title{
-    margin-top: 0;
+     margin-top: 4rem;
     color: var(--white);
   }
   .hero__paragraph{
     color: var(--white);
+    font-weight: 400;
+    padding-bottom: 1.5rem;
   }
   .hero__right{
     padding-left: 0rem;
@@ -376,10 +407,17 @@ input:focus{
     align-self: center;
   }
 
+  .hero__title{
+      font-size: 1.75rem;
+      line-height: 35.56px;
+    }
   .hero__right img{
+    margin-top: 0;
     width: 400px;
+    margin-left: 3rem;
   }
   .message{
-    display: none;
+    top: 63rem;
   }
+  
 }
