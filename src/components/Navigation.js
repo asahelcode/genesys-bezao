@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-
+//Image imports
 import Logo from '../assets/svgs/mealLogo.svg';
 import Search from '../assets/svgs/searchIcon.svg';
 import Cart from '../assets/svgs/myTrayIcon.svg';
 import Home from '../assets/svgs/homeIcon.svg';
 import List from '../assets/svgs/mealListIcon.svg';
 import Shop from '../assets/svgs/shopIcon.svg';
-import CloseIcon from '../assets/images/close.png';
-import MenuIcon from '../assets/images/hamburger.png';
+import CloseIcon from '../assets/svgs/close.svg';
+import MenuIcon from '../assets/svgs/menu.svg';
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -60,6 +60,8 @@ const Navigation = () => {
                     </div>
                 </div>
 
+
+                {/* MOBILE NAVIGATION */}
                 <div className="navigation__right--mobile">
                     <div className="icons">
                         <Link to="/" className={isOpen ? "invisible" : ""}>
